@@ -1,7 +1,7 @@
 ---
 layout: post
 category : blog
-tags : [plan , OSX , sinatra , git-flow , mongodb , python]
+tags : [Plan , OSX , Sinatra , Git-flow , Mongodb , Python]
 ---
 {% include JB/setup %}
 
