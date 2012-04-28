@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Jekyll-Bootstrap
 
 The quickest way to start and publish your Jekyll powered blog. 100% compatible with GitHub pages
@@ -40,3 +41,18 @@ The master and gh-pages branch do not share the same ancestry. Please treat them
 ## License
 
 [Creative Commons](http://creativecommons.org/licenses/by-nc-sa/3.0/)
+=======
+Hi,guys.Here's a blog for winking.
+
+you can get my blog code from these ways:
+
+HTTP:   http://github.com/yiwinking/yiwinking.github.com.git
+
+Git:    git://github.com/yiwinking/yiwinking.github.com.git
+
+SSH:    ssh://git@github.com/yiwinking/yiwinking.github.com.git
+
+Git Clone:   Git clone git@github.com:yiwinking/yiwinking.github.com.git
+
+
+>>>>>>> 9c2ad9caa916b757595771f3c0f6285091825cb7
