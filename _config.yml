@@ -10,10 +10,10 @@ pygments: true
 # so be sure to set them if your theme uses them.
 #
 title : winking's Blog
-tagline: Site Tagline
+tagline: 
 author :
-  name : Name Lastname
-  email : blah@email.test
+  name : yiwinking
+  email : yiwinking@gmail.com
   github : yiwinking
   twitter : 
   feedburner : 
