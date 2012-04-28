@@ -1,7 +1,7 @@
 ---
 layout: post
-category : lessons
-tags : [intro, beginner, jekyll, tutorial]
+category : blog
+tags : [plan,OSX,sinatra,git-flow,mongodb,python]
 ---
 {% include JB/setup %}
 
