@@ -10,7 +10,7 @@ I used phantom to get information from a SNS community last week , it's consider
 ####<a href ="http://code.google.com/p/phantomjs/wiki/QuickStart">phantom document</a>
 
 ### Usage:
-.1.create a webpage object object.
+.1.create a webpage object.
 
 `var page = require ("webpage").create();`
 
@@ -64,9 +64,12 @@ The page should be loaded completely, so it turns to another object with command
 `});`
 
 
-###Web loading logic
+###Webpage loading logic
+.1 : As we mentioned , the webpage object can't work before loading finish.So we use `setTimeout` to make sure it can be used.
 
+.2 : `setTimeout` gives us a time to set, however ,we don't know which time is suitable ,so a Recursive function should be needed .
 
+.3 : How to control this Recursive function ? `Running times limit` (running_time_limit) may be a good idea. In fact, the number of times makes webpage object works should be found out , then sets the max running time bigger.     
 
  
 
