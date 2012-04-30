@@ -25,7 +25,7 @@ tags : [Gem , Jekyll , Jekyll-Bootstrap ]
 Jekyll is a ruby Gem for blog aware, documents  in <a href = "https://github.com/mojombo/jekyll">English</a>, <a href = "http://chen.yanping.me/cn/blog/2011/12/15/building-static-sites-with-jekyll/">Chinese </a>.
 
 
-## Third stpe : Clone a blog with Jekyll-bootstrap
+## Third step : Clone a blog with Jekyll-bootstrap
 
  Now we use <a href = "https://github.com/plusjade/jekyll-bootstrap">Jekyll-Bootstrap</a> to clone a blog for us.
 #### USERNAME is your github name.
