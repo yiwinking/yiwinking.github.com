@@ -117,7 +117,7 @@ It may arise  by diffrent versions of  passenger and nginx ,so sooyoung create a
  
 Then I clone the project from the server.
 
-##First I should create a key and add it to the server system.
+###First I should create a key and add it to the server system.
 
 how to add ssh key document.click the link <http://help.github.com/mac-set-up-git/>
 
