@@ -13,36 +13,36 @@ This article may be useful for those who get the same probelms.
 
 `sudo apt-get install build-essential bison openssl libreadline6 libreadline6-dev curl git-core zlib1g zlib1g-dev libssl-dev libyaml-dev  libxml2-dev libxslt-dev autoconf libc6-dev zlib1g-dev libssl-dev build-essential curl git-core libc6-dev g++ gcc`
 
-then install  RVM,the manager for Ruby controller
+###then  install RVM and loading RVM ENV.
 
-安装 rvm
+`bash < <(curl -s https://raw.github.com/wayneeseguin/rvm/master/binscripts/rvm-installer)`
 
-bash < <(curl -s https://raw.github.com/wayneeseguin/rvm/master/binscripts/rvm-installer)
+Loading rvm ENV
 
-加载rvm (只需第一次安装时加载)
+`source .bashrc`
 
-source .bashrc
-
-use  `` to show if the rvm installed successfully.
+use  `rvm info` or `type rvm|head -n 1` to check if the rvm installed successfully.
 
 
-安装ruby libs.
+###install necessary ruby libs.
 
-sudo aptitude install build-essential bison openssl libreadline5 libreadline5-dev curl git-core zlib1g zlib1g-dev libssl-dev libsqlite3-0 libsqlite3-dev sqlite3 libxml2-dev libmysqlclient-dev
+`sudo aptitude install build-essential bison openssl libreadline5 libreadline5-dev curl git-core zlib1g zlib1g-dev libssl-dev libsqlite3-0 libsqlite3-dev sqlite3 libxml2-dev libmysqlclient-dev`
 
+###install ruby in rvm
 rvm install 1.9.3
 
 then rvm list ,got
 
-#get Problem one:
+#####get Problem :
 
 Default ruby not set. Try 'rvm alias create default ruby'.
 
-#solvtion then type:
-rvm alias create default 1.9.3
+#####solution :
+`rvm alias create default 1.9.3`
 
-add 1.9.3 as default
-rvm use 1.9.3 --default
+then add 1.9.3 as default:
+
+`rvm use 1.9.3 --default`
 
 add passenger as ruby version  1.9.3
 
@@ -52,29 +52,32 @@ but get Note message :
 NOTE: If you are using Passenger 3 you no longer need the passenger_ruby,
 use the wrapper script for your ruby instead (see 'rvm wrapper')
  
-so no need to take care of this Note,cause the ENV will be setted by itself.
+ No need to take care of this Note,cause the ENV will be setted by itself.
 
+`rvm use 1.9.3 default`.
 
+###then install passenger and nginx with Gem and rvmsudo
 
-rvm use 1.9.3 default
+`gem install passenger`
 
-then install passenger and nginx with Gem and rvmsudo
+`rvmsudo passenger-install-nginx-module`
 
-gem install passenger
-rvmsudo passenger-install-nginx-module
+when we install the passenger-install-nginx-module , there comes another problem ,
 
-when we install the passenger-install-nginx-module , there comes problem 2 
-#Problem two:
+#####Problem:
 Curl development headers with SSL support... not found
 
-just go on ,cause it will 提示 us which libs we need
-(go on)
+#####Solution:
+just go on ,cause it will prompt  us that which libs we need and should be installed
+
 To install Curl development headers with SSL support:
    Please run apt-get install libcurl4-openssl-dev or libcurl4-gnutls-dev, whichever you prefer.
-#solvtion:
-so sudo apt-get install libcurl4-openssl-dev
 
-try to get passenger start with it's command:
+#####Solution:
+`sudo apt-get install libcurl4-openssl-dev`
+
+
+try to get "passenger start" with it's command:`passenger start`
 but alse got problems:
 #Problem three
 passenger start
@@ -91,17 +94,20 @@ You can stop Phusion Passenger Standalone by pressing Ctrl-C.
 	from /home/ubuntu/.rvm/gems/ruby-1.9.2-p320/gems/rack-flash-0.1.2/lib/rack/flash.rb:20:in `run'
 
 I don't know how to fix this problem,so try to restart the nginx:
-also ,comes problems 
+
+ok,comes other problems 
 
 restart ngnix 
-sudo /etc/init.d/nginx start
+
+`sudo /etc/init.d/nginx start`
+
  * Starting Nginx Server...                                                                                                                                                                                                                 Segmentation fault
 
-Segmentation fault ,dump,another problem comes ,I try to find out what  the problems are,but false, the solvtions google gives can't help
+Segmentation fault ,I tried to find out what the problems were ,but fail, the solutions which  google gives can't help.
 
 so I ask kevin and Yasith for help.
 
-It may cause by  diffrent versions,so sooyoung create anouther new server for me ,so the problem get out .
+It may arise  by diffrent versions of  passenger and nginx ,so sooyoung create anouther new server , .
 
  
 then I clone the project from the server.
