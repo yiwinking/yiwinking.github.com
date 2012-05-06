@@ -237,8 +237,10 @@ Passenger encountered the following error:
 `PhusionPassenger::Rack::ApplicationSpawner::Error`
 
 It is hard to find out the solution for this problem, <http://code.google.com/p/phusion-passenger/issues/detail?id=590>,this article may be helpful,
-
 but after my trying,it seems not.
+
+In fact,I don't know why I can meet these quite a lot of problems,finally,another new server was created to deploy for the project,with kevin,yasith,sooyoung's help,
+It works. I should ask them for steps and attention about deploying this padrino project on Monday.
 
 
 
