@@ -5,17 +5,13 @@ title : how to deploy a padrino project into a server
 tags : [Padrino , Deploy , Ruby , Mysql , Server ]
 ---
 
-To deploy a padrino project with passenger and nginx to a new server,it should be a easy job.
+To deploy a padrino project with passenger and nginx to a new server,it should be a easy job,but I did not use nginx before,and It seems quite a lot of problems came out.
 
-But when I deployed ,quite a lot of  problems come up. so this page will be helpful to 
+This article may be useful for those who get the same probelms.
 
-first should add the linux first 
+###First we should install some necessary  linux libs. 
 
-install nesseilly linux libs
- 
-(安装所需的linux包)
-
-sudo apt-get install build-essential bison openssl libreadline6 libreadline6-dev curl git-core zlib1g zlib1g-dev libssl-dev libyaml-dev  libxml2-dev libxslt-dev autoconf libc6-dev zlib1g-dev libssl-dev build-essential curl git-core libc6-dev g++ gcc
+`sudo apt-get install build-essential bison openssl libreadline6 libreadline6-dev curl git-core zlib1g zlib1g-dev libssl-dev libyaml-dev  libxml2-dev libxslt-dev autoconf libc6-dev zlib1g-dev libssl-dev build-essential curl git-core libc6-dev g++ gcc`
 
 then install  RVM,the manager for Ruby controller
 
