@@ -12,16 +12,24 @@ mongodb homepage <http://www.mongodb.org/display/DOCS/Home>
 ####some usual mongo commands :
 
 `show  dbs`
+
 `show  collections`
+
 `show  users`              
+
 `show  profile`     
+
 `use <db name>`    
+
 `db.help()`                    help on DB methods
+
 `db.foo.help()`                help on collection methods
+
 `db.foo.find()`                list objects in collection foo
+
 `db.foo.find( { a : 1 } )`     list objects in foo where a == 1 
 
-####CURD
+###CURD
 
 #####create
 
