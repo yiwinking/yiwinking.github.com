@@ -1,5 +1,5 @@
 ---
-ayout: post
+layout: post
 category : blog
 title : Mongodb and MongoMapper
 tags : [Mongodb , Database , MongoMapper ]
