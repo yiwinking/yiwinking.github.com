@@ -16,6 +16,7 @@ Document :
 
 .4: <http://blog.aizatto.com/2009/02/06/building-custom-error-pages/>
 
+
 ####First :
 
   we should set the config environment,defaults,true for development, false for production:
@@ -43,8 +44,11 @@ rescue_from Exception, :with => :render_error
 define `render_error`
 
   def render_not_found(exception)
+
     log_error(exception)
+
     render :template => "/error/404.html.erb", :status => 404
+
   end
 
 ####Fifth :
