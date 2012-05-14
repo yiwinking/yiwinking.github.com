@@ -14,4 +14,38 @@ Document :
 
 .3: <http://www.perfectline.ee/blog/custom-dynamic-error-pages-in-ruby-on-rails>
 
+.4: <http://blog.aizatto.com/2009/02/06/building-custom-error-pages/>
+First :
 
+  we should set the config environment,defaults,true for development, false for production:
+
+`config.action_controller.consider_all_requests_local = false`
+
+Second :
+
+  use method : `rescue_from` in `ApplicationController`
+
+  something about rescue:
+
+`ActiveSupport::Rescuable::ClassMethods`
+
+`activesupport/lib/active_support/rescuable.rb`
+
+<http://api.rubyonrails.org/classes/ActiveSupport/Rescuable/ClassMethods.html>
+
+then use it ,like this:
+
+rescue_from Exception, :with => :render_error
+
+Third :
+
+define `render_error`
+
+  def render_not_found(exception)
+    log_error(exception)
+    render :template => "/error/404.html.erb", :status => 404
+  end
+
+Fifth :
+
+add 404 page or something else .
