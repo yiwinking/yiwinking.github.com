@@ -18,25 +18,25 @@ install serverdensity agents on slaves
 
 	1)Install our public repo key: 'wget -q https://www.serverdensity.com/downloads/SOMEKEY.key -O- | sudo apt-key add -'
 
-	2)Add the Server Density repository to apt: sudo vim  /etc/apt/sources.list.d/sd-agent.list,add 'deb http://www.serverdensity.com/downloads/linux/deb all main'
+	2)Add the Server Density repository to apt: `sudo vim  /etc/apt/sources.list.d/sd-agent.list`,add `deb http://www.serverdensity.com/downloads/linux/deb all main`
 
-	3)sudo apt-get update 
+	3)`sudo apt-get update`
 
-	4)sudo apt-get install sd-agent
+	4)`sudo apt-get install sd-agent`
 
-	5)sudo vim /etc/sd-agent/config.cfg
+	5)`sudo vim /etc/sd-agent/config.cfg`
 
 	6)add :
 
-'[Main]'
+`[Main]`
 
-'sd_url: http://favmed.serverdensity.com'
+`sd_url: http://favmed.serverdensity.com`
 
-'agent_key: (Key Number)'
+`agent_key: (Key Number)`
 
-	7)'sudo /etc/init.d/sd-agent start'
+	7)`sudo /etc/init.d/sd-agent start
 
-5.turn to webapp,and click alerts, then add what we need.
+.5.turn to webapp,and click alerts, then add what we need.
 
 such as :
 
