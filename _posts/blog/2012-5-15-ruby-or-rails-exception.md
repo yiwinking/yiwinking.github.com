@@ -1,7 +1,7 @@
 ---
 layout: post
 category : blog
-title :Ruby exception(update at may 29)
+title :Ruby exception
 tags : [ Ruby , Exception ]
 ---
 
