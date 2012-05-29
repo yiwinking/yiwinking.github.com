@@ -157,7 +157,7 @@ here , if we get a "!",it will stop dealing with user's input.
 
 ###rails exception
 
-Rhere are two articles for rails exception, they may be good examples for us.
+There are two articles for rails exception, they may be good examples for us.
 
 http://clark1231.iteye.com/blog/1446693
 
