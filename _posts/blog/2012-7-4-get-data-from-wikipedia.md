@@ -10,8 +10,8 @@ this script is for getting data from wikipeida (in fact , from dbpedia) and upda
 
 `update_log_file`
 
-.
-testi
+    .
+    testi
 
 
 adfadfafaa
