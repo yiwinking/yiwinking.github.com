@@ -38,7 +38,20 @@ BTW , this link will encode to "http://dbpedia.org/page/Sergio_Ag%C3%BCero" , an
 
  and its live site link is  "http://live.dbpedia.org/data/Sergio_Ag%C3%BCero.json", for json.
 
-######part two : functions
+#####part one : logic
+
+`csvparser.rb` script, it read a CSV file, which has identity and wiki_link, then update identity (`update_identity(wiki_data_hash)`) from ??API.  
+
+`wikibot.rb` script, `fetch_wiki_urls` creates wiki_identity_list (identity hash) , and identities  have keys : "id","name","wiki_url" . 
+
+ then `parse_wiki_json_url(search_url)` (let http://dbpedia.org/resource/Sergio_Ag%C3%BCero as search_url) , first change search_url into Json_url, and make it into json hash, match abstract(for "ru" and "zh" , "en" is from `get_live_english_abstract()`) and name .  
+
+`self.find(search_url)` first load rdf page , then use `load_rdf_query_list` to get other data , like "name", "birthDate", "deathDate", "abstract", "thumbnail", "subject", "type", make data into two part , "data_query_list" and "data_name_list" .  
+
+run_artirix_category_create_update()
+
+
+#####part two : wikibot functions
 
 Function 1 : `update_log_file` for updating log and writing to log.txt . 
 
