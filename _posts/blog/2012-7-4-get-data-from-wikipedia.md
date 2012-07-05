@@ -1,5 +1,6 @@
 ---
 layout: post
+title : 
 category : blog
 tags : [Wikipedia , Ruby , Script]
 ---
@@ -10,7 +11,10 @@ this script is for getting data from wikipeida (in fact , from dbpedia) and upda
 `update_log_file`
 
 .
-test
+testi
+
+
+adfadfafaa
 
 
 
