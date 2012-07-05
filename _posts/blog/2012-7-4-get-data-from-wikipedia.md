@@ -40,13 +40,13 @@ BTW , this link will encode to "http://dbpedia.org/page/Sergio_Ag%C3%BCero" , an
 
 ######part two : functions
 
- `update_log_file` for updating log and writing to log.txt . 
+Function 1 : `update_log_file` for updating log and writing to log.txt . 
 
-`get_live_english_abstract(name)` for getting  english abstract from live site. 
+Function 2 : `get_live_english_abstract(name)` for getting  english abstract from live site. 
 
- this function use `RestClient.get(json_url)` to get  json data and return Json parser by using `JSON.parse(json_data)`.
+ this function use `RestClient.get(json_url)` to get  json data and return Json parser by using `JSON.parse(json_data)` , then match abstract .
 
-
+Function 3 : `self.find(search_url)`
  
     
      
