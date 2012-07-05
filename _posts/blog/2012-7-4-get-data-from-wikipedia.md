@@ -5,6 +5,26 @@ category : blog
 tags : [Wikipedia , Ruby , Script]
 ---
 
+ Gems list : 
+
+    .
+    require "rubygems"
+
+    require "rdf" : http://rubydoc.info/github/ruby-rdf/rdf/master/frames
+
+    require "linkeddata" : http://rdf.greggkellogg.net/yard/index.html
+
+    require "active_record"
+
+    require "uri"
+
+    require "json"
+
+    require "rest_client" : http://rubydoc.info/gems/rest-client/1.6.7/frames
+
+    require "escape_utils" : http://rubydoc.info/gems/escape_utils/0.2.4/frames
+
+    require "date"
 
 This script is for getting data from wikipeida (in fact , from dbpedia) and update english part from live.dbpeida.org.
 
@@ -18,8 +38,13 @@ BTW , this link will encode to "http://dbpedia.org/page/Sergio_Ag%C3%BCero" , an
 
  and its live site link is  "http://live.dbpedia.org/data/Sergio_Ag%C3%BCero.json", for json.
 
-    `update_log_file` for updating log to log.txt file . 
+ `update_log_file` for updating log and writing to log.txt . 
 
+`get_live_english_abstract(name)` for getting  english abstract from live site. 
+
+ this function gets json and 
+name = Sergio_Ag%C3%BCero ,
+    
      
 
 
