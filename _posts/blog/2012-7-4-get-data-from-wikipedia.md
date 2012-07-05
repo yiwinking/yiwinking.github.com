@@ -48,7 +48,13 @@ BTW , this link will encode to "http://dbpedia.org/page/Sergio_Ag%C3%BCero" , an
 
 `self.find(search_url)` first load rdf page , then use `load_rdf_query_list` to get other data , like "name", "birthDate", "deathDate", "abstract", "thumbnail", "subject", "type", make data into two part , "data_query_list" and "data_name_list" .  
 
-run_artirix_category_create_update()
+`run_artirix_category_create_update(category_list)` , list all the category from webpage, and use `Category.find(category_id)` to find and check if those categories from website in the ??API, if not , create and save it . In fact , it means ,  category will update if there are new ones.
+
+`run_artirix_identity_create_update(identity,final_output,category_id_list_identity)` , add all the data from above functions, then save identity to ??API.
+
+
+
+    .
 
 
 #####part two : wikibot functions
