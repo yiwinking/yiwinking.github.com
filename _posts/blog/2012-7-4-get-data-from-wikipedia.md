@@ -84,4 +84,4 @@ Function 8 : `fetch_wiki_urls_dummy` fetch wiki urls , here we can use a = [idet
 
 Function 9 : `fetch_wiki_urls` , it works is same to fetch_wiki_urls_dummy, but it get identities by `wiki_urls.length` to limit . 
 
-function 10 : 
+function 10 : then `parse_wiki_json_url(search_url)` ,  first change search_url into Json_url, and make it into json hash, match abstract(for "ru" and "zh" , "en" is from `get_live_english_abstract()`) and name . 
