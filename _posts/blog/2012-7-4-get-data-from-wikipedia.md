@@ -38,12 +38,16 @@ BTW , this link will encode to "http://dbpedia.org/page/Sergio_Ag%C3%BCero" , an
 
  and its live site link is  "http://live.dbpedia.org/data/Sergio_Ag%C3%BCero.json", for json.
 
+######part two : functions
+
  `update_log_file` for updating log and writing to log.txt . 
 
 `get_live_english_abstract(name)` for getting  english abstract from live site. 
 
- this function gets json and 
-name = Sergio_Ag%C3%BCero ,
+ this function use `RestClient.get(json_url)` to get  json data and return Json parser by using `JSON.parse(json_data)`.
+
+
+ 
     
      
 
