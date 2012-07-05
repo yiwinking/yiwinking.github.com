@@ -64,21 +64,24 @@ BTW , this link will encode to "http://dbpedia.org/page/Sergio_Ag%C3%BCero" , an
 
 #####part two : wikibot functions
 
-Function 1 : `update_log_file` for updating log and writing to log.txt . 
+Function 1 : `update_log_file` , for updating log and writing to log.txt . 
 
-Function 2 : `get_live_english_abstract(name)` for getting  english abstract from live site. 
+Function 2 : `get_live_english_abstract(name)` ,  for getting  english abstract from live site. 
 
  this function use `RestClient.get(json_url)` to get  json data and return Json parser by using `JSON.parse(json_data)` , then match abstract .
 
-Function 3 : `self.find(search_url)`
+Function 3 : `self.find(search_url)` , first use "RDF::Graph.load(search_url)" to load RDF page, the use Function 4 `load_rdf_query_list` help to query data , as output. 
+
+Function 4 : `load_rdf_query_list` , create data_query_list and data_name_query_list.
  
-    
-     
+Function 5 : `abstract_subject_live(search_url)` , to get english text acstract content from live site.    
 
+Function 6 : `run_artirix_category_create_update(category_list)` , get category list from parameter ,check categories from ??API by using `Category.find(category_id)` , if not exist , create and update categories.
 
+Function 7 : `run_artirix_identity_create_update(identity,final_output,category_id_list_identity)` , match data , and update . save "external_links" doesn't work? 
 
+Function 8 : `fetch_wiki_urls_dummy` fetch wiki urls , here we can use a = [idetity_id] to test. It will find identity by `find` , then match and give us wiki_urls. 
 
+Function 9 : `fetch_wiki_urls` , it works is same to fetch_wiki_urls_dummy, but it get identities by `wiki_urls.length` to limit . 
 
-
-
-
+function 10 : 
