@@ -80,10 +80,10 @@ Then we can get what we want . "live" site should be newer for enlish , replace 
 `self.find(search_url)` first load rdf page , then use `load_rdf_query_list` to get other data , like "name", "birthDate", "deathDate", "abstract", "thumbnail", "subject", "type", make data into two part , "data_query_list" and "data_name_list" .  
 
 
-`run_artirix_category_create_update(category_list)` , list all the category from webpage, and use `Category.find(category_id)` to find and check if those categories from website in the ??API, if not , create and save it . In fact , it means ,  category will update if there are new ones.
+`run_category_create_update(category_list)` , list all the category from webpage, and use `Category.find(category_id)` to find and check if those categories from website in the ??API, if not , create and save it . In fact , it means ,  category will update if there are new ones.
 
 
-`run_artirix_identity_create_update(identity,final_output,category_id_list_identity)` , add all the data from above functions, then save identity to ??API.
+`run_identity_create_update(identity,final_output,category_id_list_identity)` , add all the data from above functions, then save identity to ??API.
 
 
 
@@ -104,9 +104,9 @@ Function 4 : `load_rdf_query_list` , create data_query_list and data_name_query_
  
 Function 5 : `abstract_subject_live(search_url)` , to get english text acstract content from live site.    
 
-Function 6 : `run_artirix_category_create_update(category_list)` , get category list from parameter ,check categories from ??API by using `Category.find(category_id)` , if not exist , create and update categories.
+Function 6 : `run_category_create_update(category_list)` , get category list from parameter ,check categories from ??API by using `Category.find(category_id)` , if not exist , create and update categories.
 
-Function 7 : `run_artirix_identity_create_update(identity,final_output,category_id_list_identity)` , match data , and update . save "external_links" doesn't work? 
+Function 7 : `run_identity_create_update(identity,final_output,category_id_list_identity)` , match data , and update . save "external_links" doesn't work? 
 
 Function 8 : `fetch_wiki_urls_dummy` fetch wiki urls , here we can use a = [idetity_id] to test. It will find identity by `find` , then match and give us wiki_urls. 
 
@@ -116,8 +116,3 @@ function 10 : then `parse_wiki_json_url(search_url)` ,  first change search_url 
 
 
 
-asdfaaf
-
-
-adfafad  afafafadfa  fadafad  
-afsdfaf
