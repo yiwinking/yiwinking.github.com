@@ -1,6 +1,5 @@
 ---
 layout: post
-title : 
 category : blog
 tags : [Wikipedia , Ruby , Script]
 ---
@@ -37,6 +36,35 @@ BTW , this link will encode to "http://dbpedia.org/page/Sergio_Ag%C3%BCero" , an
 "http://dbpedia.org/data/Sergio_Ag%C3%BCero.rdf" , 
 
  and its live site link is  "http://live.dbpedia.org/data/Sergio_Ag%C3%BCero.json", for json.
+
+
+#####How To :
+
+######Where to get data from wikipedia ? 
+
+Actually , we can use DBpedia , DBpedia is a community effort to extract structured information from Wikipedia and to make this information available on the Web. Take a look at "http://en.wikipedia.org/wiki/Sergio_Ag%C3%BCero" , "http://live.dbpedia.org/page/Sergio_Ag%C3%BCero" , and "http://dbpedia.org/page/Sergio_Ag%C3%BCero" . the "live" one just for english . 
+
+So now , from dbpedia, we can get json and rdf format data from different URL , such as "http://dbpedia.org/data/Sergio_Agüero.rdf" and "http://dbpedia.org/data/Sergio_Agüero.json" , data or file should be shown to us .   
+
+######How to get data from dbpedia ?
+
+But how can we deal with the data ? try this :
+
+First : use Gem "RestClient" and  json link
+("http://dbpedia.org/data/Sergio_Agüero.json") to get json , json_hash =  JSON.parse(RestClient.get(Json_link)) , if the link need to change encode, then create a loop and judgment to decode, like "URI.decode(json_link)"
+
+Second : match and catch data. 
+
+for example : 
+
+redirects = json_hash[search_url]["http://dbpedia.org/ontology/wikiPageRedirects"]
+ 
+abstract = json_hash[search_url]["http://dbpedia.org/ontology/abstract"]
+
+match_info can be get from "rdf" format webpage. 
+ 
+Then we can get what we want . "live" site should be newer for enlish , replace it . 
+
 
 #####part one : logic
 
@@ -85,3 +113,11 @@ Function 8 : `fetch_wiki_urls_dummy` fetch wiki urls , here we can use a = [idet
 Function 9 : `fetch_wiki_urls` , it works is same to fetch_wiki_urls_dummy, but it get identities by `wiki_urls.length` to limit . 
 
 function 10 : then `parse_wiki_json_url(search_url)` ,  first change search_url into Json_url, and make it into json hash, match abstract(for "ru" and "zh" , "en" is from `get_live_english_abstract()`) and name . 
+
+
+
+asdfaaf
+
+
+adfafad  afafafadfa  fadafad  
+afsdfaf
