@@ -70,9 +70,9 @@ an example :
     <script>
       function test(){
         if (Modernizr.canvas){
-          document.getElementById("checkVideoResult").innerHTML="ok , canvas can be used";
+          document.getElementById("test").innerHTML="ok , canvas can be used";
         } else {
-          document.getElementById("checkVideoResult").innerHTML="Sorry. cavas can not be used";
+          document.getElementById("test").innerHTML="Sorry. cavas can not be used";
           }
         }
     </script>
@@ -80,7 +80,7 @@ an example :
 
     <p>test support HTML5 canvas</p>
 
-    <div id="checkVideoResult" style="margin:10px 0 0 0; border:0;padding:0;">
+    <div id="test" style="margin:10px 0 0 0; border:0;padding:0;">
       <button onclick="test()" style="font-family:Arial, Helvetica,sans-serif;">Check</button>
     </div>
 
