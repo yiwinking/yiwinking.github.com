@@ -6,7 +6,7 @@ tags : [Html5]
 
 how to check html5 works in your brower ?  I found two ways for this , if you find other ways to test , please comment to me , thank you . :D 
 
-First way : create one JS with new HTML5 Element , such as `video` ,`audio` and so on. here comes an example . 
+#####First : create one JS with new HTML5 Element , such as `video` ,`audio` and so on. here comes an example . 
 
     <p>your browser support video? </p> 
 
@@ -59,4 +59,33 @@ First way : create one JS with new HTML5 Element , such as `video` ,`audio` and 
     }
     </script>
 
+But this method seems not a simple and neat way. so I think the second way would be better . 
 
+#####Second : use `Moderniz` js lib. 
+
+Download : http://modernizr.com/downloads/modernizr-2.5.3.js ; Document : http://modernizr.com/docs/ 
+
+an example : 
+
+    <script>
+      function test(){
+        if (Modernizr.canvas){
+          document.getElementById("checkVideoResult").innerHTML="ok , canvas can be used";
+        } else {
+          document.getElementById("checkVideoResult").innerHTML="Sorry. cavas can not be used";
+          }
+        }
+    </script>
+
+
+    <p>test support HTML5 canvas</p>
+
+    <div id="checkVideoResult" style="margin:10px 0 0 0; border:0;padding:0;">
+      <button onclick="test()" style="font-family:Arial, Helvetica,sans-serif;">Check</button>
+    </div>
+
+
+
+
+
+ 
